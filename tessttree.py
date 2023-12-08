@@ -8,7 +8,7 @@ n = 100.0
 screen = Screen()
 screen.register_shape("D:/img2GIF1.gif")
 
-
+# setting 
 t.hideturtle()
 speed("fastest") 
 screensize(bg='skyblue')  
@@ -26,7 +26,7 @@ for i in range(5):
 end_fill()
 right(126)
 
-
+# Tạo trang trí trên cây
 def drawlight():  
     if r.randint(0, 30) == 0:  
         color('tomato')  
@@ -41,7 +41,7 @@ def drawlight():
 color("dark green")  
 backward(n * 4.8)
 
-
+# tạo cây
 def tree(d, s): 
     if d <= 0: return
     forward(s)
@@ -55,10 +55,11 @@ def tree(d, s):
     backward(s)
 
 
-# tree(15, n)
-# backward(n / 3)
+tree(15, n)
+backward(n / 3)
 
-for i in range(10):  
+# Tạo gốc
+for i in range(200):  
     a = 200 - 400 * r.random()
     b = 10 - 20 * r.random()
     up()
@@ -75,11 +76,11 @@ for i in range(10):
     backward(a)
     right(90)
     backward(b)
-
+# Title
 t.color("dark red", "red") 
 t.write("Merry Christmas ", align="center", font=("Comic Sans MS", 40, "bold"))  
 
-
+#  Tạo snown
 def move_snowflakes():
     for flake in snowflakes:
         flake.sety(flake.ycor() - 5) 
